@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1 >Remote Fingerprint Based Web Authentication Tool</h1>
+        <div class="container">
+            <div class="box">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                    <p id="registerAuthText" style="display: none;">Register your biometric</p>
+                </form>
+            </div>
+
+            <div class="box">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p id="loginAuthText" style="display: none;">Authenticate via biometric</p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
