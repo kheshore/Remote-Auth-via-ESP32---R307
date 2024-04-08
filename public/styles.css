@@ -1,55 +1,160 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
 .container {
-    display: flex;
-    padding: 5rem;
-    gap: 10rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+  display: flex;
+  padding: 5rem;
+  gap: 10rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-.box{
-    width: 20rem;
-    text-align: center;
+.box {
+  width: 20rem;
+  text-align: center;
 }
 
 h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 input[type="email"],
 input[type="password"],
 input[type="text"],
 button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
+}
+
+.contBox {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  margin: 0;
+  background-color: #6d6d6d;
+  color: #fff;
+  gap: 10px;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header a:hover {
+  color: #ccc;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-top: 0;
+  background-color: #6d6d6d;
+  color: #fff;
+}
+
+.sidebar h3 {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  color: #6d6d6d;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+}
+
+.cBox {
+  display: flex;
+  height: 100vh;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='30' height='30' patternTransform='scale(3) rotate(90)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(206,13%,57.6%,1)'/><path d='M0 22.5h30v15H0zm15-15h30v15H15m-30-15h30v15h-30zm15-15h30v15H0z'  stroke-width='5' stroke='hsla(205,9%,47.8%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+  height: 20%;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='32' height='30' patternTransform='scale(3) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(209,12.7%,35.5%,1)'/><path d='M0 22.5h30v15H0zm15-15h30v15H15m-30-15h30v15h-30zm15-15h30v15H0z' transform='translate(1,0)' stroke-width='6' stroke='hsla(206,11%,44.5%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  color: #fff;
+}
+
+.content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.folder {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #fff;
+  margin: 2rem;
+  width: 20%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-left: 10px solid #ff0000a2;
+}
+
+.folder:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fileSection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }

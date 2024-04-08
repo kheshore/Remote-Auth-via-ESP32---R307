@@ -68,7 +68,9 @@ async function login(formData) {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Failed to log in');
     }
-    return await response.json();
+    const responseData = await response.json();
+    window.location.href = `/welcome.html?name=${encodeURIComponent(responseData.name)}`;
+    return responseData;
 }
 
 let id = 0;

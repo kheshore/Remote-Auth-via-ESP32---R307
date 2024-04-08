@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="contBox">
+        <div class="header">
+            <a href="index.html">Home</a>
+            <a href="welcome.html">About</a>
+            <a href="index.html">Logout</a>
+        </div>
+        <div class="cBox">
+            <div class="sidebar">
+                <h3>Files</h3>
+                <h3>Folders</h3>
+                <h3>Images</h3>
+                <h3>Music</h3>
+                <h3>Videos</h3>
+                <br>
+                <h3>Settings</h3>
+            </div>
+            <div class="contentBox">
+                <h1 class="content" id="welcomeMessage"></h1>
+                <div class="fileSection">
+                    <div class="folder">
+                        <p> Secret files</p>
+                    </div>
+                    <div class="folder">
+                        <p> Studies</p>
+                    </div>
+                    <div class="folder">
+                        <p> Password.pdf</p>
+                    </div>
+                    <div class="folder">
+                        <p> Report.doc</p>
+                    </div>
+                </div>
+                <div class="fileSection">
+                    <div class="folder">
+                        <p> Private files</p>
+                    </div>
+                    <div class="folder">
+                        <p> logo.png</p>
+                    </div>
+                    <div class="folder">
+                        <p> anthem.mp3</p>
+                    </div>
+                    <div class="folder">
+                        <p> video.mp4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        document.getElementById('welcomeMessage').textContent = `Welcome, ${name}!`;
+    </script>
+</body>
+
+</html>

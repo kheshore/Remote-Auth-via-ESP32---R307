@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html")); 
 });
 
+app.get("/welcome.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "welcome.html")); 
+});
+
 app.post("/register", async (req, res) => {
   const { email, id, name } = req.body;
 
@@ -35,7 +39,8 @@ app.post("/register", async (req, res) => {
   });
     res.json({ success: true, message: "Registration successful" });
     enrolledUsers[id] = { email, name };
-  } catch (error) {
+  } 
+  catch (error) {
     console.error("Error enrolling fingerprint"); 
     res
       .status(500)
@@ -49,14 +54,16 @@ app.post("/login", async (req, res) => {
 
   if (id) {
     const formData = new FormData();
-    formData.append("id", id);
+    formData.append("id", id); 
     try {
       await axios.post("http://192.168.0.119/verify", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-      res.json({ success: true, message: `Hello, ${enrolledUsers[id].name}` });
+
+      res.json({ success: true, name: enrolledUsers[id].name });
+
     } catch (error) {
       console.error("Error verifying fingerprint:", error.response.data);
       res
